@@ -5,9 +5,9 @@
 class MedianFinder {
 
   private:
-  //We put this on the MOTHAFUCKIN HEAP because we have no idea how large this fucker
-  //will become!
-  std::vector<int> *list;
+    //We put this on the MOTHAFUCKIN HEAP because we have no idea how large this fucker
+    //will become!
+    std::vector<int> *list;
     
   public:
     /** initialize your data structure here. */
