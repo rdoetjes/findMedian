@@ -29,7 +29,7 @@ class MedianFinder {
         int s = list->size(); //total number (we use this more than once so precalculate)
         int m = s >> 1; //middle of the list (we use this at least once in either outcome)
 	sort(list->begin(), list->end());
-        return (s & 1 ? list->at(m) : (double)(list->at(m - 1) + list->at(m)) * 0.5);
+        return (s & 1 ? list->at(m) : (double)(list->at(m - 1) + list->at(m)) / 2.0); 
     }
     
     ~MedianFinder() {
