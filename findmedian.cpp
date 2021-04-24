@@ -2,11 +2,6 @@
 #include <vector>
 #include <stdlib.h>
 
-/* This is a leetcode "coding test": https://leetcode.com/problems/find-median-from-data-stream/
- * This demonstrates the uselessness of coding questions.
- * it doesn't test insight;
- */
-
 class MedianFinder {
 
   private:
