@@ -9,12 +9,12 @@
 
 class MedianFinder {
 
-private:
-  //We poin this on the MOTHAFUCKIN HEAP because we have no idea how large this mothafucker
+  private:
+  //We put this on the MOTHAFUCKIN HEAP because we have no idea how large this mothafucker
   //will become!
   std::vector<int> *list;
     
-public:
+  public:
     /** initialize your data structure here. */
     /* Hell NO!!! Your structure should be private 
      * Why else do you have an addNum method?
@@ -35,9 +35,9 @@ public:
         int m = n >> 1;
         return (n & 1 ? list->at(m) : (double)(list->at(m - 1) + list->at(m)) * 0.5);
     }
-    
+
     /*
-     * Why the fuck wasn't there a destructor in your template, LEETCODE?
+     * Why the fuck wasn't there a destructor in your stupid fucking template?
      * Why did I have to put in the mothafucking effort?
      */
     ~MedianFinder() {
@@ -51,17 +51,16 @@ public:
  * obj->addNum(num);
  * double param_2 = obj->findMedian();
  */
-int main(){
-
+int main(){  
   MedianFinder f;
-  f.addNum(3);
+  f.addNum(1);
   f.addNum(2);
   f.addNum(3);
   std::cout << "Median for {1, 2, 3}: " << f.findMedian() << std::endl;
-  f.addNum(3);
+  f.addNum(4);
   f.addNum(2);
-  f.addNum(3);
-  std::cout << "Median for {3, 2, 1, 5, 6, 4}: " << f.findMedian() << std::endl;
+  f.addNum(7);
+  std::cout << "Median for {1, 2, 3, 4, 7}: " << f.findMedian() << std::endl;
 
   return 0;
 }
