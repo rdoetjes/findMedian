@@ -26,10 +26,10 @@ class MedianFinder {
     }
     
     double findMedian() {
-        int n = list->size(); //total number (we use this more than once so precalculate)
-        int m = n >> 1; //middle of the list (we use this at least once in either outcome)
+        int s = list->size(); //total number (we use this more than once so precalculate)
+        int m = s >> 1; //middle of the list (we use this at least once in either outcome)
 	sort(list->begin(), list->end());
-        return (n & 1 ? list->at(m) : (double)(list->at(m - 1) + list->at(m)) * 0.5);
+        return (s & 1 ? list->at(m) : (double)(list->at(m - 1) + list->at(m)) * 0.5);
     }
     
     ~MedianFinder() {
