@@ -16,7 +16,7 @@ private:
     
 public:
     /** initialize your data structure here. */
-    /* Hell NO MOTHAFUCKER!!! Your structure should be private 
+    /* Hell NO!!! Your structure should be private 
      * Why else do you have an addNum method?
      * And I don't think that in this case you would like this structure to be public
      * because otherwise a better more suitable approach would be to pass a pointer to
@@ -31,21 +31,17 @@ public:
     }
     
     double findMedian() {
-       size_t  mid = (list->size() >> 1); // precalculate this as it's used in both situations and shifting is faster than /
-
-       if (list->size() % 2 == 0)
-         return static_cast<double>( (double)(list->at(mid-1) + (double)list->at(mid)) / 2);
-       else
-         return static_cast<double>(list->at(mid));
+        int n = list->size();
+        int m = n >> 1;
+        return (n & 1 ? list->at(m) : (double)(list->at(m - 1) + list->at(m)) * 0.5);
     }
     
     /*
-     * Why the fuck wasn't there a destructir in your stupid fucking template?
+     * Why the fuck wasn't there a destructor in your template, LEETCODE?
      * Why did I have to put in the mothafucking effort?
      */
     ~MedianFinder() {
-       if (list!=NULL)
-         delete list; 
+       if (list!=NULL) delete list; 
     }
 };
 
@@ -61,11 +57,11 @@ int main(){
   f.addNum(3);
   f.addNum(2);
   f.addNum(3);
-  std::cout << "Median for {3, 2, 3}: " << f.findMedian() << std::endl;
+  std::cout << "Median for {1, 2, 3}: " << f.findMedian() << std::endl;
   f.addNum(3);
   f.addNum(2);
   f.addNum(3);
-  std::cout << "Median for {3, 2, 1, 5, 2, 3}: " << f.findMedian() << std::endl;
+  std::cout << "Median for {3, 2, 1, 5, 6, 4}: " << f.findMedian() << std::endl;
 
   return 0;
 }
