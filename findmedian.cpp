@@ -60,7 +60,7 @@ int main(){
   f.addNum(4);
   f.addNum(2);
   f.addNum(7);
-  std::cout << "Median for {1, 2, 3, 4, 7}: " << f.findMedian() << std::endl;
+  std::cout << "Median for {1, 2, 3, 4, 2, 7}: " << f.findMedian() << std::endl;
 
   return 0;
 }
